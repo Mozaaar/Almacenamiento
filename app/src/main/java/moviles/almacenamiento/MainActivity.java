@@ -20,8 +20,6 @@ public class MainActivity extends AppCompatActivity {
     Button botonMostrarTexto;
     TextView textView;
     Button guardarArchivo;
-    Button leerArchivo;
-    TextView textoContenido;
     String textoIngresado;
 
     @Override
@@ -46,8 +44,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         guardarArchivo = findViewById(R.id.btn_save);
-        leerArchivo = findViewById(R.id.btn_save);
-        textoContenido = findViewById(R.id.txt_textview);
+
         guardarArchivo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
