@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Almacenamiento</string>
+    <string name="btn_upload">Upload</string>
+    <string name="btn_save">Save</string>
+    <string name="txt_textview">Write something</string>
+    <string name="output_text" />
+</resources>
