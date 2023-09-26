@@ -69,7 +69,7 @@ public class MainActivity extends AppCompatActivity {
                     BufferedReader fin =
                             new BufferedReader(
                                     new InputStreamReader(
-                                            openFileInput("prueba_int.txt")));
+                                            openFileInput(textoIngresado)));
 
                     String texto = fin.readLine();
                     textoContenido.setText( texto );
