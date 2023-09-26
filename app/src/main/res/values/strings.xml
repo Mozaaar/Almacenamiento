@@ -4,4 +4,5 @@
     <string name="btn_save">Save</string>
     <string name="txt_textview">Write something</string>
     <string name="output_text" />
+    <string name="btn_read">Read</string>
 </resources>

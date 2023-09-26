@@ -21,6 +21,8 @@ public class MainActivity extends AppCompatActivity {
     TextView textView;
     Button guardarArchivo;
     String textoIngresado;
+    Button leerArchivo;
+    TextView textoContenido;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,7 +46,8 @@ public class MainActivity extends AppCompatActivity {
 
 
         guardarArchivo = findViewById(R.id.btn_save);
-
+        leerArchivo = findViewById(R.id.btn_read) ;
+        textoContenido = findViewById( R.id.txt_textview );
         guardarArchivo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -59,7 +62,28 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+        leerArchivo.setOnClickListener( new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                try{
+                    BufferedReader fin =
+                            new BufferedReader(
+                                    new InputStreamReader(
+                                            openFileInput("prueba_int.txt")));
 
+                    String texto = fin.readLine();
+                    textoContenido.setText( texto );
+                    fin.close();
+                }
+                catch (Exception ex)
+                {
+                    Log.e("Ficheros", "Error al leer fichero desde memoria interna");
+                }
+            }
+        } );
     }
 
     }
+
+
+
